@@ -1,0 +1,100 @@
+/* =========================
+   Base（共通スタイル）
+========================= */
+:root{
+  --bg:#f7f4ef;             /* ページ背景色 */
+  --ink:#3a352d;            /* 基本文字色 */
+  --muted:#7a7265;          /* サブテキスト色 */
+  --brand:#b08b5b;          /* アクセントカラー */
+  --paper:#ffffff;           /* カードやメニューの背景色 */
+  --shadow: 0 8px 24px rgba(0,0,0,.06); /* 柔らかい影 */
+  --radius: 14px;            /* 角丸 */
+  --gap: clamp(16px, 2vw, 24px); /* レスポンシブの余白 */
+}
+
+*{ box-sizing: border-box; }   /* パディングやボーダーを幅に含める */
+html,body{ margin:0; padding:0; }
+body{
+  font-family: 'Noto Sans JP', sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.8;           /* 行間 */
+  letter-spacing: .02em;      /* 文字間 */
+}
+
+img{ display:block; max-width:100%; height:auto; } /* 画像を枠いっぱいに表示、縦横比保持 */
+
+.container{
+  width: min(1120px, 92%);    /* 最大幅1120px、それより小さいときは92%幅 */
+  margin: 0 auto;             /* 横中央寄せ */
+}
+
+/* =========================
+   セクション共通
+========================= */
+.section{ padding: clamp(56px, 8vw, 104px) 0; } /* 上下余白をレスポンシブに */
+.section-alt{ background: #fbfaf8; }            /* 交互に背景色を変える */
+
+.section-title{
+  font-family: 'Noto Serif JP', serif;  /* 見出し用フォント */
+  font-weight: 700;
+  font-size: clamp(22px, 3vw, 32px);   /* レスポンシブ対応 */
+  margin: 0 0 1.2em;
+}
+
+/* =========================
+   ヘッダー
+========================= */
+.site-header{
+  position: sticky;              /* スクロールしても上に固定 */
+  top: 0;
+  z-index: 50;
+  backdrop-filter: saturate(180%) blur(8px); /* 背景のぼかし */
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  border-bottom: 1px solid rgba(0,0,0,.04);
+}
+
+.header-inner{ display:flex; align-items:center; justify-content:space-between; padding: 14px 0; }
+
+.logo{ font-family:'Noto Serif JP'; font-weight:700; font-size:20px; color:var(--ink); text-decoration:none; }
+
+.nav a{ color:var(--ink); text-decoration:none; margin-left:18px; font-weight:600; }
+.nav a:hover{ color:var(--brand); }
+
+/* =========================
+   ヒーローセクション
+========================= */
+.hero{
+  position: relative;
+  min-height: 72vh;                  /* 画面の72%高さ */
+  display: grid;
+  place-items: center;               /* 中央寄せ */
+  color: #fff;
+  text-align: center;
+  isolation: isolate;
+  background: 
+    linear-gradient(to bottom, rgba(0,0,0,.2), rgba(0,0,0,.2)), /* 画像の上に薄暗いグラデーション */
+    url('images/hero.jpg') center/cover no-repeat fixed; /* 背景画像 */
+}
+.hero-inner{ padding: clamp(48px, 6vw, 80px) 0; }
+
+.tagline{ display:inline-block; padding:6px 12px; background: rgba(0,0,0,.25); border-radius:999px; font-size:12px; margin-bottom:14px; }
+.hero-title{ font-family:'Noto Serif JP'; font-weight:700; font-size:clamp(36px, 7vw, 64px); margin:0 0 .3em; }
+.hero-lead{ font-size:clamp(14px,2.2vw,18px); opacity:.95; margin:0 auto 1.2em; max-width:42ch; }
+
+.btn{
+  display:inline-block;
+  text-decoration:none;
+  background: var(--brand);
+  color:#fff;
+  padding:12px 20px;
+  border-radius:999px;
+  box-shadow: var(--shadow);
+  transition: transform .2s ease, filter .2s ease;
+}
+.btn:hover{ transform: translateY(-2px); filter: brightness(1.05); }
+
+/* =========================
+   2カラム・メニュー・ギャラリー
+   （前回コードをコメント化して同様に）
+========================= */
