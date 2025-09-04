@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cafe Lumière | 心と体をやさしく満たす、街角の隠れ家カフェ</title>
+  <meta name="description" content="自家焙煎コーヒーと手作りスイーツが楽しめる小さなカフェ。大切な人との時間を、心地よい空間でゆったりとお過ごしください。">
+
+  <!-- フォントを読み込む（Google Fonts） -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600&family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- CSSファイルを読み込む -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <!-- ロゴリンク -->
+      <a class="logo" href="#top" aria-label="Cafe Lumière トップへ">Cafe Lumière</a>
+      <!-- ナビゲーション -->
+      <nav class="nav" aria-label="メインメニュー">
+        <a href="#about">私たちについて</a>
+        <a href="#menu">メニュー</a>
+        <a href="#gallery">ギャラリー</a>
+        <a href="#access">アクセス</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ヒーローセクション（最初に目に入る大きな画像エリア） -->
+  <section id="top" class="hero" aria-label="メインビジュアル">
+    <div class="hero-inner container">
+      <!-- キャッチコピー -->
+      <p class="tagline">心と体をやさしく満たす、街角の隠れ家カフェ</p>
+      <!-- メインタイトル -->
+      <h1 class="hero-title">Cafe Lumière</h1>
+      <!-- 紹介文 -->
+      <p class="hero-lead">自家焙煎コーヒーと手作りスイーツが楽しめる小さなカフェ。<br>
+        大切な人との時間を、心地よい空間でゆったりとお過ごしください。</p>
+      <!-- ボタン -->
+      <a class="btn" href="#menu">メニューを見る</a>
+    </div>
+  </section>
+
+  <!-- About セクション（カフェ紹介） -->
+  <section id="about" class="section">
+    <div class="container cols">
+      <div class="col">
+        <h2 class="section-title">私たちについて</h2>
+        <p>
+          「Cafe Lumière」は、街角にひっそり佇む小さなカフェ。<br>
+          旬の素材を取り入れたスイーツと、丁寧に焙煎したコーヒーで、ほっと一息つける時間をお届けします。
+        </p>
+      </div>
+      <div class="col">
+        <!-- 店内写真 -->
+        <figure class="photo-card">
+          <img src="images/about.jpg" alt="木の温もりある店内と窓から差し込む柔らかな光">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu セクション -->
+  <section id="menu" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">メニュー</h2>
+      <div class="menu-grid">
+        <!-- メニュー項目 -->
+        <article class="menu-item">
+          <img src="images/menu-coffee.jpg" alt="本日のスペシャルコーヒー">
+          <div class="menu-item-body">
+            <h3>本日のスペシャルコーヒー</h3>
+            <p>その日の焙煎と豆に合わせ、香りと甘みを最大限に引き出します。</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <img src="images/menu-tart.jpg" alt="季節のタルト">
+          <div class="menu-item-body">
+            <h3>季節のタルト</h3>
+            <p>旬のフルーツで仕立てる、軽やかな甘さの自家製タルト。</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <img src="images/menu-herbtea.jpg" alt="自家製ハーブティー">
+          <div class="menu-item-body">
+            <h3>自家製ハーブティー</h3>
+            <p>体をやさしく整える、ブレンドハーブの穏やかな香り。</p>
+          </div>
+        </article>
+      </div>
+      <p class="menu-note">※食材の入荷状況により内容が変わる場合があります。</p>
+    </div>
+  </section>
+
+  <!-- ギャラリーセクション -->
+  <section id="gallery" class="section">
+    <div class="container">
+      <h2 class="section-title">ギャラリー</h2>
+      <div class="gallery-grid">
+        <!-- 画像を追加・差し替え可能 -->
+        <figure class="gallery-item"><img src="images/gallery-1.jpg" alt="窓際席と観葉植物のある落ち着いた店内"></figure>
+        <figure class="gallery-item"><img src="images/gallery-2.jpg" alt="自家焙煎の豆とドリップの様子"></figure>
+        <figure class="gallery-item"><img src="images/gallery-3.jpg" alt="ガラスケースに並ぶ自家製スイーツ"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Access セクション（地図と住所） -->
+  <section id="access" class="section section-alt">
+    <div class="container cols">
+      <div class="col">
+        <h2 class="section-title">アクセス</h2>
+        <p class="access-text">
+          〒000-0000 東京都〇〇区〇〇 0-0-0<br>
+          営業時間：10:00–19:00（不定休）<br>
+          お問い合わせ：<a href="mailto:hello@example.com">hello@example.com</a>
+        </p>
+      </div>
+      <div class="col">
+        <!-- 地図埋め込み -->
+        <div class="map-embed" aria-hidden="true">
+          <iframe
+            title="Google Map"
+            src="https://maps.google.com/maps?q=tokyo&t=&z=14&ie=UTF8&iwloc=&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>&copy; <span id="year"></span> Cafe Lumière</small>
+      <a class="to-top" href="#top" aria-label="ページ上部へ戻る">▲</a>
+    </div>
+  </footer>
+
+  <!-- 年号を自動で更新するJavaScript -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
